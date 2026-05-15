@@ -1,0 +1,21 @@
+[project]
+name = "voyager"
+version = "0.1.0"
+description = "VoyageReady AI — autonomous Trip Planning Agent"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.0.0",
+    "pydantic>=2.13.4",
+    "python-dotenv>=1.2.2",
+    "streamlit>=1.57.0",
+]
+
+[tool.uv]
+# Use the default PyPI index (can swap to a private registry here)
+index-url = "https://pypi.org/simple"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
