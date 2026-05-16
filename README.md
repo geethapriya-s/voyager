@@ -1,6 +1,18 @@
 # Quick links:
 System promt validation by claude : https://claude.ai/share/7ba8bfbb-520e-4c80-a9fe-9c79aa24f67c
      At first it did qualify only 2/8 criteria. If you scroll down in the above claude chat link, it satisfies all 8/8 criteria after refinment.
+{
+  "explicit_reasoning": true,
+  "structured_output": true,
+  "tool_separation": true,
+  "conversation_loop": true,
+  "instructional_framing": true,
+  "internal_self_checks": true,
+  "reasoning_type_awareness": true,
+  "fallbacks": true,
+  "overall_clarity": "Excellent — all nine criteria met, and this version is stronger than the previous one. Two notable upgrades: (1) Today's Date and Departure Date are now explicit in TRIP CONTEXT, giving the model grounded temporal awareness rather than relying on injected day counts alone; (2) the TOOL USE PROTOCOL now includes a Tool-available row with a {tool_docs} injection point, making real tool calls a first-class citizen alongside LOOKUP flags. The instruction 'CALL the tool — never guess when a tool can answer' is a strong anti-hallucination directive. One thing to watch: {tool_docs} must be populated at runtime — if it renders as an empty string, the Tool-available row becomes a dangling instruction with no tools defined, which could confuse the model. Consider adding a fallback note like 'If no tools are available, treat all live data as [LOOKUP]'."
+}
+
 
 # ✈️ VoyageReady AI
 
